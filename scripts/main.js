@@ -1,4 +1,4 @@
-// Kate Craig Portfolio - Main JavaScript
+// Unity Housing Website - Main JavaScript
 
 document.addEventListener("DOMContentLoaded", function () {
   // ==========================================

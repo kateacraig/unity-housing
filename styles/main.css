@@ -8,7 +8,7 @@
   --black: #000000;
   --dark-gray: #121412;
   --light-gray: #bcbcbc;
-  --light-blue: #244965;
+  --light-blue: #3470ff;
 
   /* Typography */
   --font-heading: "Playfair Display", serif;
@@ -51,9 +51,9 @@
 
 body {
   font-family: var(--font-body);
-  color: var(--black);
+  color: var(--white);
   line-height: 1.6;
-  background-color: var(--white);
+  background-color: var(--black);
 }
 
 section {
@@ -174,6 +174,31 @@ p {
   color: var(--white);
 }
 
+.btn-donate-footer {
+  background-color: var(--light-blue);
+  color: var(--white);
+  height: 60px;
+  width: 150px;
+  padding: 0 20px;
+  border-radius: 30px;
+  border: 1.5px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.btn-donate-footer:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--light-blue);
+  color: var(--light-blue);
+}
+
 .btn-project {
   background-color: var(--light-blue);
   color: var(--white);
@@ -224,8 +249,19 @@ header {
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   align-items: center;
+}
+
+.logo-container {
+  order: 1;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 /* Navigation */
@@ -263,6 +299,60 @@ nav {
     -0.6px 0.6px 0 var(--white), 0.6px 0.6px 0 var(--white);
 }
 
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: var(--white);
+  background-color: var(--black);
+  min-width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0;
+  z-index: 1001;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  color: var(--text-dark);
+  padding: 0.75rem 1.5rem;
+  display: block;
+  transition: var(--transition);
+}
+
+.dropdown-content a:hover {
+  background-color: var(--light-blue);
+  color: var(--white);
+}
+
+.dropdown > a::after {
+  content: "";
+  display: inline-block;
+  margin-left: 8px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--white);
+  vertical-align: middle;
+  transition: var(--transition);
+}
+
+.dropdown:hover > a::after {
+  border-top-color: var(--dark-gray);
+}
+
 /* Hamburger Menu */
 .hamburger {
   display: none;
@@ -297,6 +387,123 @@ nav {
    ========================================== */
 
 /* Hero Section */
+
+/* ==========================================
+   Footer
+   ========================================== */
+footer {
+  margin-top: 4rem;
+  border-top: 2px solid var(--white);
+}
+
+/* Footer Grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 2rem;
+  margin-top: 3rem;
+}
+
+.footer-important-links h3 {
+  color: var(--light-blue);
+}
+
+.footer-mobile-links-grid {
+  display: none;
+}
+
+/* Footer Logo */
+.footer-logo img {
+  width: 150px;
+  height: auto;
+  margin-top: 2rem;
+}
+
+.footer-donate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.footer-donate-other {
+  margin-top: 1rem;
+}
+
+.footer-follow-uh-mobile {
+  display: none;
+}
+
+.footer-follow-uh h3 {
+  color: var(--light-blue);
+}
+
+.footer-follow-uh h4 {
+  font-size: 1.1rem;
+}
+
+.footer-follow-uh a:hover {
+  color: var(--purple);
+}
+
+.footer-donate-other a {
+  background-color: var(--light-blue);
+  color: var(--white);
+  height: 60px;
+  width: 150px;
+  padding: 0 20px;
+  border-radius: 30px;
+  border: 1.5px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.footer-donate-other a:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--light-blue);
+  color: var(--light-blue);
+}
+
+.footer-donate h3 {
+  color: var(--light-blue);
+}
+
+.footer-copyright {
+  margin-top: 4rem;
+  font-weight: 300;
+}
+
+.important-links li {
+  list-style: none;
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: "Boogaloo";
+}
+
+.important-links li:hover {
+  color: var(--light-blue);
+}
+
+.footer-social-icons {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+}
+
+.footer-social-icon {
+  font-size: 30px;
+}
+
+.footer-social-icon:hover {
+  color: var(--light-blue);
+}
 
 /* Responsive Design */
 @media (max-width: 1200px) {
@@ -356,6 +563,18 @@ nav {
     padding: 1rem;
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dropdown-content {
+    position: static;
+    display: none;
+    box-shadow: none;
+    color: var(--white);
+    margin-left: 1rem;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: block;
   }
 
   section {
