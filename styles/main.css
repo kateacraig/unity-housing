@@ -199,28 +199,33 @@ p {
   color: var(--light-blue);
 }
 
-.btn-project {
+.btn-nav {
   background-color: var(--light-blue);
   color: var(--white);
-  padding: 0.8rem 1.3rem;
-  width: 300px;
-  border-radius: var(--radius-md);
-  border: 1.5px solid var(--white);
+  height: 60px;
+  width: 150px;
+  padding: 0 20px;
+  border-radius: 30px;
+  border: 1.5px solid var(--black);
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  font-family: var(--font-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1rem;
-  margin-top: 2rem;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.btn-project:hover {
+.btn-nav:hover {
   background-color: var(--white);
   border: 1.5px solid var(--light-blue);
   color: var(--light-blue);
+}
+
+.nav-menu > li > a.btn-nav {
+  display: flex;
 }
 
 /* Container */
@@ -292,11 +297,7 @@ nav {
 }
 
 .nav-menu > li > a:hover {
-  color: var(--dark-gray);
-  font-weight: 700;
-  font-size: 1.3rem;
-  text-shadow: -0.6px -0.6px 0 var(--white), 0.6px -0.6px 0 var(--white),
-    -0.6px 0.6px 0 var(--white), 0.6px 0.6px 0 var(--white);
+  color: var(--light-blue);
 }
 
 /* Dropdown Menu */
@@ -406,6 +407,7 @@ footer {
 
 .footer-important-links h3 {
   color: var(--light-blue);
+  font-size: 2rem;
 }
 
 .footer-mobile-links-grid {
@@ -435,10 +437,12 @@ footer {
 
 .footer-follow-uh h3 {
   color: var(--light-blue);
+  font-size: 2rem;
 }
 
 .footer-follow-uh h4 {
   font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .footer-follow-uh a:hover {
@@ -472,6 +476,7 @@ footer {
 
 .footer-donate h3 {
   color: var(--light-blue);
+  font-size: 2rem;
 }
 
 .footer-copyright {
@@ -592,6 +597,56 @@ footer {
   /* Mobile adjustments */
   .container {
     padding: 0 2rem;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-mobile-links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  .important-links {
+    display: none;
+  }
+
+  .important-links-mobile li {
+    list-style: none;
+    padding: 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .footer-follow-uh {
+    display: none;
+  }
+
+  .footer-follow-uh-mobile {
+    display: grid;
+  }
+
+  .footer-follow-uh-mobile h4 {
+    font-size: 1.3rem;
+  }
+
+  .footer-social-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-logo img {
+    margin-top: 0.5rem;
+  }
+
+  .footer-copyright {
+    font-size: 12px;
   }
 }
 
