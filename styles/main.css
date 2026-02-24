@@ -394,6 +394,24 @@ nav {
 
 /* Hero Section */
 
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+    url(../images/hero-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0;
+  color: white;
+  text-shadow: -1px -1px 0 var(--light-blue), 1px -1px 0 var(--light-blue),
+    -1px 1px 0 var(--light-blue), 1px 1px 0 var(--light-blue);
+  text-align: center;
+  margin: 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 /* ==========================================
    Footer
    ========================================== */
