@@ -149,18 +149,12 @@ p {
   margin-top: 4rem;
 }
 
-.border {
-  border: var(--border);
-  margin: 0 50px;
+.pr-2 {
+  padding-right: 2rem;
 }
 
-.blue-border {
-  border: 5px solid var(--light-blue);
-  padding: 20px;
-}
-
-.blue-project-border {
-  border: 5px solid var(--light-blue);
+.pl-2 {
+  padding-left: 2rem;
 }
 
 /* Buttons */
@@ -205,6 +199,30 @@ p {
 }
 
 .btn-hero:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--light-blue);
+  color: var(--light-blue);
+}
+
+.btn-help {
+  background-color: var(--light-blue);
+  color: var(--white);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 1.5px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 16px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.btn-help:hover {
   background-color: var(--white);
   border: 1.5px solid var(--light-blue);
   color: var(--light-blue);
@@ -485,12 +503,115 @@ nav {
   margin-top: 2rem;
 }
 
+/* Our Plan Section */
+
+.our-plan {
+  margin-top: -2rem;
+}
+
+.our-plan-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.our-plan-grid-item {
+  max-width: calc(var(--desktop) / 2);
+  margin: 0 auto;
+}
+
+.our-plan-grid-item-white {
+  max-width: calc(var(--desktop) / 2);
+  margin: 0 auto;
+  background: var(--white);
+  color: var(--black);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.our-plan-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.our-plan h3 {
+  font-size: 65px;
+  margin-bottom: 2rem;
+  text-decoration: underline var(--light-blue);
+}
+
+.our-plan h2 {
+  font-size: 24px;
+}
+
+.our-plan-grid-item-white h3 {
+  font-size: 45px;
+  text-decoration: none;
+}
+
+.benefits h3 {
+  font-size: 65px;
+  color: var(--light-blue);
+  text-decoration: none;
+}
+
+/* Help Section */
+
+.help {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url(../images/help-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0;
+  color: white;
+
+  text-align: center;
+  margin: 0;
+}
+
+.help h2 {
+  font-size: 65px;
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black),
+    -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+  text-decoration: underline var(--light-blue);
+  margin-bottom: 4rem;
+}
+
+.help-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.help-grid-item {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 15px;
+  color: var(--black);
+  border: 1px solid var(--light-blue);
+}
+
+.help h3 {
+  font-size: 36px;
+  font-weight: 600;
+  text-decoration: underline 2px var(--light-blue);
+}
+
+.help h4 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--white);
+  text-shadow: -0.25px -0.25px 0 var(--black), 0.25px -0.25px 0 var(--black),
+    -0.25px 0.25px 0 var(--black), 0.25px 0.25px 0 var(--black);
+}
+
 /* ==========================================
    Footer
    ========================================== */
 footer {
-  margin-top: 4rem;
-  border-top: 2px solid var(--white);
+  margin-top: 2rem;
 }
 
 /* Footer Grid */
