@@ -497,6 +497,7 @@ nav {
     -1px 1px 0 var(--black), 1px 1px 0 var(--black);
   margin-top: 2rem;
   font-weight: 500;
+  line-height: 1.5;
 }
 
 .hero-grid-item a {
